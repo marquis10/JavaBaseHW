@@ -11,7 +11,7 @@ public class task1 {
         delEven(intList);
         minValue(intList);
         maxValue(intList);
-        // averageValue(intList);
+        averageValue(intList);
     }
 
 
@@ -25,7 +25,8 @@ public class task1 {
             }
             count++;
         }
-        System.out.println(list);
+        System.out.println();
+        System.out.printf("Коллекция без чётных чисел %d", Arrays.toString(list));
     }
 
 
@@ -36,7 +37,8 @@ public class task1 {
                 value = integer;
             }
         }
-        System.out.println(value);        
+        System.out.println();
+        System.out.printf("Наименьшее число коллекции %d", value);
     }
 
 
@@ -47,11 +49,20 @@ public class task1 {
                 value = integer;
             }
         }
-        System.out.println(value);   
+        System.out.println();
+        System.out.printf("Наибольшее число коллекции %d", value);
     }
 
 
     public static void averageValue(ArrayList<Integer> list) {
-        
+        int value = 0, count = 0;
+        for (Integer integer : list) {
+            value =  value + integer;
+        }
+        System.out.println();
+        System.out.printf("Количество элементов коллекции %d", list.size());
+        System.out.printf("Сумма всех чисел коллекции %d", value);
+        value = value / list.size();
+        System.out.printf("Среднеарифметическое коллекции %d", value);
     }
 }
