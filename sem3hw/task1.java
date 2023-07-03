@@ -2,7 +2,6 @@ package sem3hw;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Iterator;
 import java.util.List;
 
 public class task1 {
@@ -11,7 +10,7 @@ public class task1 {
         System.out.println(intList);
         delEven(intList);
         minValue(intList);
-        // maxValue(intList);
+        maxValue(intList);
         // averageValue(intList);
     }
 
@@ -42,7 +41,13 @@ public class task1 {
 
 
     public static void maxValue(ArrayList<Integer> list) {
-        
+        int value = list.get(0);
+        for (Integer integer : list) {
+            if (integer > value) {
+                value = integer;
+            }
+        }
+        System.out.println(value);   
     }
 
 
