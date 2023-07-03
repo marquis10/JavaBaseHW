@@ -2,6 +2,7 @@ package sem3hw;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
 public class task1 {
@@ -9,7 +10,7 @@ public class task1 {
         ArrayList<Integer> intList = new ArrayList<>(Arrays.asList(4,2,3,4,4,9,2,5,7,1,8,6,7));
         System.out.println(intList);
         delEven(intList);
-        // minValue(intList);
+        minValue(intList);
         // maxValue(intList);
         // averageValue(intList);
     }
@@ -30,7 +31,13 @@ public class task1 {
 
 
     public static void minValue(ArrayList<Integer> list) {
-        
+        int value = list.get(0);
+        for (Integer integer : list) {
+            if (integer < value) {
+                value = integer;
+            }
+        }
+        System.out.println(value);        
     }
 
 
