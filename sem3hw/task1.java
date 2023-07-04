@@ -7,6 +7,7 @@ import java.util.List;
 public class task1 {
     public static void main(String[] args) {
         ArrayList<Integer> intList = new ArrayList<>(Arrays.asList(4,2,3,4,4,9,2,5,7,1,8,6,7));
+        System.out.printf("Стартовая коллекция: ");
         System.out.println(intList);
         delEven(intList);
         minValue(intList);
@@ -25,8 +26,8 @@ public class task1 {
             }
             count++;
         }
-        System.out.println();
-        System.out.printf("Коллекция без чётных чисел %d", Arrays.toString(list));
+        System.out.printf("Коллекция без чётных чисел: ");
+        System.out.print(list);
     }
 
 
@@ -38,7 +39,7 @@ public class task1 {
             }
         }
         System.out.println();
-        System.out.printf("Наименьшее число коллекции %d", value);
+        System.out.printf("Наименьшее число коллекции: %d", value);
     }
 
 
@@ -50,7 +51,7 @@ public class task1 {
             }
         }
         System.out.println();
-        System.out.printf("Наибольшее число коллекции %d", value);
+        System.out.printf("Наибольшее число коллекции: %d", value);
     }
 
 
@@ -60,9 +61,11 @@ public class task1 {
             value =  value + integer;
         }
         System.out.println();
-        System.out.printf("Количество элементов коллекции %d", list.size());
-        System.out.printf("Сумма всех чисел коллекции %d", value);
+        System.out.printf("Количество элементов коллекции: %d", list.size());
+        System.out.println();
+        System.out.printf("Сумма всех чисел коллекции: %d", value);
         value = value / list.size();
-        System.out.printf("Среднеарифметическое коллекции %d", value);
+        System.out.println();
+        System.out.printf("Средне-арифметическое коллекции: %d", value);
     }
 }
