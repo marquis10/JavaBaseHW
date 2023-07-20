@@ -47,6 +47,7 @@ public class task1 {
         nbooks.add(CreatMapNb(noteBook11, mapSpec));
         nbooks.add(CreatMapNb(noteBook12, mapSpec));
 
+        System.out.println(mapSpec);
         FilterNoteBook(nbooks);
     }
 
